@@ -12,9 +12,10 @@ class ApiService(private val ipPort: String) {
         .readTimeout(10, TimeUnit.SECONDS)
         .build()
 
-    suspend fun healthCheck(): Boolean {
+    suspend fun healthCheck(): String {
         return try {
-            val url = "http://$ipPort/api/health"
+            // HARDCODED FOR TESTING - Always test this exact endpoint
+            val url = "http://192.168.1.65:8080/api/health"
             Log.d("ApiService", "Making request to: $url")
             val request = Request.Builder()
                 .url(url)
@@ -23,10 +24,18 @@ class ApiService(private val ipPort: String) {
             val response = httpClient.newCall(request).execute()
             Log.d("ApiService", "Response status: ${response.code}")
             Log.d("ApiService", "Response successful: ${response.isSuccessful}")
-            response.isSuccessful
+            
+            if (response.isSuccessful) {
+                val bodyString = response.body?.string() ?: "No response body"
+                Log.d("ApiService", "Response body: $bodyString")
+                bodyString
+            } else {
+                "Error: Server returned ${response.code}"
+            }
         } catch (e: Exception) {
             Log.e("ApiService", "Health check failed: ${e.message}", e)
-            false
+            Log.e("ApiService", "Exception type: ${e.javaClass.simpleName}")
+            "Error: ${e.message}"
         }
     }
 }

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [androidx.databinding:viewbinding:8.2.0] C:\Users\Sam\.gradle\caches\transforms-3\444e30de6b58af3453484a85ea2d897b\transformed\viewbinding-8.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Sam\.gradle\caches\transforms-3\fef0b4911f7fba22eaa6d4a2664b7d03\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Sam\.gradle\caches\transforms-3\5fdcdfb84c547644513635967fe0cec1\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -65,8 +65,8 @@ ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\
 	android:name
 		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:7:5-28:19
-INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:7:5-28:19
+ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:7:5-29:19
+INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:7:5-29:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Sam\.gradle\caches\transforms-3\fef0b4911f7fba22eaa6d4a2664b7d03\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Sam\.gradle\caches\transforms-3\fef0b4911f7fba22eaa6d4a2664b7d03\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Sam\.gradle\caches\transforms-3\5fdcdfb84c547644513635967fe0cec1\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -95,32 +95,34 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Sam\.gradle\caches
 		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:12:9-50
+	android:networkSecurityConfig
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:13:9-69
 	android:name
 		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:8:9-31
 activity#com.qds.aiagent.MainActivity
-ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:14:9-21:20
+ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:15:9-22:20
 	android:exported
-		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:16:13-36
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:17:13-36
 	android:name
-		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:15:13-41
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:17:13-20:29
+ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:18:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:20:27-74
 activity#com.qds.aiagent.SettingsActivity
-ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:23:9-26:58
+ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:24:9-27:58
 	android:parentActivityName
-		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:26:13-55
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:27:13-55
 	android:exported
-		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:25:13-37
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:24:13-45
+		ADDED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml:25:13-45
 uses-sdk
 INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\src\main\AndroidManifest.xml

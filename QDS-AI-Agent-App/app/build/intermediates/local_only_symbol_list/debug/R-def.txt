@@ -44,3 +44,4 @@ string send_button
 string settings_button
 string settings_title
 style Theme.QDS_AI_Agent
+xml network_security_config

@@ -5414,6 +5414,7 @@ com.qds.aiagent:style/ThemeOverlay.MaterialComponents.Toolbar.Popup.Primary = 0x
 com.qds.aiagent:attr/buttonTint = 0x7f030098
 com.qds.aiagent:style/Widget.MaterialComponents.Button.TextButton.Dialog = 0x7f0f03f8
 com.qds.aiagent:color/material_dynamic_primary60 = 0x7f050243
+com.qds.aiagent:xml/network_security_config = 0x7f110000
 com.qds.aiagent:color/m3_navigation_item_text_color = 0x7f050098
 com.qds.aiagent:dimen/m3_sys_motion_easing_legacy_decelerate_control_y2 = 0x7f060204
 com.qds.aiagent:color/m3_ref_palette_secondary30 = 0x7f05013b
