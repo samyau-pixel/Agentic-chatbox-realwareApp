@@ -15,15 +15,27 @@ class ApiService(private val ipPort: String) {
         .readTimeout(240, TimeUnit.SECONDS)  // 4 minutes for very slow backend
         .build()
 
-    suspend fun sendMessage(question: String): String {
+    suspend fun sendMessage(question: String, history: List<List<String>> = emptyList()): String {
         return try {
             val url = "http://$ipPort/api/chat"
             Log.d("ApiService", "Sending message to: $url")
             Log.d("ApiService", "Question: $question")
+            Log.d("ApiService", "History size: ${history.size}")
             
             // Create JSON request body
             val jsonBody = JSONObject()
             jsonBody.put("question", question)
+            
+            // Add history as array
+            val historyArray = org.json.JSONArray()
+            for (pair in history) {
+                val pairArray = org.json.JSONArray()
+                pairArray.put(pair[0])
+                pairArray.put(pair[1])
+                historyArray.put(pairArray)
+            }
+            jsonBody.put("history", historyArray)
+            
             val requestBody = jsonBody.toString().toRequestBody("application/json".toMediaType())
             
             val request = Request.Builder()

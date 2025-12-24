@@ -18,6 +18,7 @@ drawable button_background_secondary
 drawable edit_text_background
 id cancelButton
 id chatListView
+id clearHistoryButton
 id ipPortInput
 id messageInput
 id messageText

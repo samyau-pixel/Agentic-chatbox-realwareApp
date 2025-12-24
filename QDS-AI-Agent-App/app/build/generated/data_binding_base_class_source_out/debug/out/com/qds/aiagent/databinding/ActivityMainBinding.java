@@ -26,6 +26,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ListView chatListView;
 
   @NonNull
+  public final Button clearHistoryButton;
+
+  @NonNull
   public final EditText messageInput;
 
   @NonNull
@@ -35,10 +38,11 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageButton settingsButton;
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull ListView chatListView,
-      @NonNull EditText messageInput, @NonNull Button sendButton,
-      @NonNull ImageButton settingsButton) {
+      @NonNull Button clearHistoryButton, @NonNull EditText messageInput,
+      @NonNull Button sendButton, @NonNull ImageButton settingsButton) {
     this.rootView = rootView;
     this.chatListView = chatListView;
+    this.clearHistoryButton = clearHistoryButton;
     this.messageInput = messageInput;
     this.sendButton = sendButton;
     this.settingsButton = settingsButton;
@@ -77,6 +81,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.clearHistoryButton;
+      Button clearHistoryButton = ViewBindings.findChildViewById(rootView, id);
+      if (clearHistoryButton == null) {
+        break missingId;
+      }
+
       id = R.id.messageInput;
       EditText messageInput = ViewBindings.findChildViewById(rootView, id);
       if (messageInput == null) {
@@ -95,8 +105,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, chatListView, messageInput,
-          sendButton, settingsButton);
+      return new ActivityMainBinding((LinearLayout) rootView, chatListView, clearHistoryButton,
+          messageInput, sendButton, settingsButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

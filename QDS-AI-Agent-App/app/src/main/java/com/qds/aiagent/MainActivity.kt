@@ -41,6 +41,10 @@ class MainActivity : AppCompatActivity() {
         messageInput = findViewById(R.id.messageInput)
         sendButton = findViewById(R.id.sendButton)
         settingsButton = findViewById(R.id.settingsButton)
+        findViewById<Button>(R.id.clearHistoryButton).setOnClickListener {
+            messages.clear()
+            adapter.notifyDataSetChanged()
+        }
     }
 
     private fun setupAdapter() {
@@ -81,11 +85,22 @@ class MainActivity : AppCompatActivity() {
         // Clear input field
         messageInput.text.clear()
 
-        // Send message to backend
+        // Build history from chat messages (excluding the one we just added)
+        val history = mutableListOf<List<String>>()
+        for (i in messages.indices step 2) {
+            if (i + 1 < messages.size - 1) {  // -1 because we just added user message
+                val userMsg = messages[i].text
+                val botMsg = messages[i + 1].text
+                history.add(listOf(userMsg, botMsg))
+            }
+        }
+
+        // Send message to backend with history
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 Log.d("MainActivity", "Sending message: $messageText")
-                val answer = apiService.sendMessage(messageText)
+                Log.d("MainActivity", "With ${history.size} history items")
+                val answer = apiService.sendMessage(messageText, history)
                 Log.d("MainActivity", "Received answer: $answer")
                 withContext(Dispatchers.Main) {
                     // Display bot response
