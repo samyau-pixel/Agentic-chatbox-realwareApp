@@ -71,31 +71,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendMessage(messageText: String) {
-        // Add user message to chat for reference
-        messages.add(ChatMessage("Sent: $messageText", true, System.currentTimeMillis()))
+        if (messageText.trim().isEmpty()) return
+        
+        // Add user message to chat
+        messages.add(ChatMessage(messageText, true, System.currentTimeMillis()))
         adapter.notifyDataSetChanged()
         chatListView.setSelection(messages.size - 1)
+        
+        // Clear input field
+        messageInput.text.clear()
 
-        // Always test the health endpoint
-        performHealthCheck()
-    }
-
-    private fun performHealthCheck() {
+        // Send message to backend
         GlobalScope.launch(Dispatchers.IO) {
             try {
-                Log.d("MainActivity", "Testing: http://192.168.1.65:8080/api/health")
-                val responseBody = apiService.healthCheck()
-                Log.d("MainActivity", "Health check result: $responseBody")
+                Log.d("MainActivity", "Sending message: $messageText")
+                val answer = apiService.sendMessage(messageText)
+                Log.d("MainActivity", "Received answer: $answer")
                 withContext(Dispatchers.Main) {
-                    // Display the actual response from server
-                    messages.add(ChatMessage("✓ $responseBody", false, System.currentTimeMillis()))
+                    // Display bot response
+                    messages.add(ChatMessage(answer, false, System.currentTimeMillis()))
                     adapter.notifyDataSetChanged()
                     chatListView.setSelection(messages.size - 1)
                 }
             } catch (e: Exception) {
-                Log.e("MainActivity", "Health check error: ${e.message}", e)
+                Log.e("MainActivity", "Send message error: ${e.message}", e)
                 withContext(Dispatchers.Main) {
-                    messages.add(ChatMessage("✗ ERROR: ${e.message}", false, System.currentTimeMillis()))
+                    messages.add(ChatMessage("Error: ${e.message}", false, System.currentTimeMillis()))
                     adapter.notifyDataSetChanged()
                     chatListView.setSelection(messages.size - 1)
                 }
