@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QDS AI Agent</string>
+    <string name="chat_title">QDS AI Agent</string>
+    <string name="message_hint">Enter your message...</string>
+    <string name="send_button">Send</string>
+    <string name="settings_button">Settings</string>
+    <string name="settings_title">Settings</string>
+    <string name="ip_port_label">IP and Port</string>
+    <string name="ip_port_hint">192.168.1.65:8080</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="health_check_label">Health Check</string>
+    <string name="connection_success">Connected successfully</string>
+    <string name="connection_failed">Connection failed. Please check IP and port.</string>
+    <string name="invalid_format">Invalid IP:Port format. Use format: 192.168.1.65:8080</string>
+</resources>

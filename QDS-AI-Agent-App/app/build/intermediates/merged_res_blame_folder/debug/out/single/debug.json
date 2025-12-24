@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.qds.aiagent.app-merged_res-33:/layout_item_bot_message.xml.flat",
+        "source": "com.qds.aiagent.app-main-35:/layout/item_bot_message.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-merged_res-33:/drawable_button_background_secondary.xml.flat",
+        "source": "com.qds.aiagent.app-main-35:/drawable/button_background_secondary.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-merged_res-33:/drawable_edit_text_background.xml.flat",
+        "source": "com.qds.aiagent.app-main-35:/drawable/edit_text_background.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-merged_res-33:/layout_activity_settings.xml.flat",
+        "source": "com.qds.aiagent.app-main-35:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-merged_res-33:/layout_activity_main.xml.flat",
+        "source": "com.qds.aiagent.app-main-35:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-merged_res-33:/layout_item_user_message.xml.flat",
+        "source": "com.qds.aiagent.app-main-35:/layout/item_user_message.xml"
+    }
+]

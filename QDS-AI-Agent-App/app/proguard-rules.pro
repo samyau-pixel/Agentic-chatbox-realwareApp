@@ -1,0 +1,3 @@
+-keep class com.qds.aiagent.** { *; }
+-keep interface com.qds.aiagent.** { *; }
+-keepclassmembers class com.qds.aiagent.** { *; }

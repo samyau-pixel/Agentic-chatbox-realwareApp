@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFF</color>
+    <color name="bot_message">#F5F5F5</color>
+    <color name="error">#CF6679</color>
+    <color name="foreground">#000000</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_variant">#1976D2</color>
+    <color name="secondary">#03DAC6</color>
+    <color name="secondary_variant">#018786</color>
+    <color name="user_message">#E3F2FD</color>
+    <dimen name="app_icon_size">48dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="text_size_header">20sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <string name="app_name">QDS AI Agent</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="chat_title">QDS AI Agent</string>
+    <string name="connection_failed">Connection failed. Please check IP and port.</string>
+    <string name="connection_success">Connected successfully</string>
+    <string name="health_check_label">Health Check</string>
+    <string name="invalid_format">Invalid IP:Port format. Use format: 192.168.1.65:8080</string>
+    <string name="ip_port_hint">192.168.1.65:8080</string>
+    <string name="ip_port_label">IP and Port</string>
+    <string name="message_hint">Enter your message...</string>
+    <string name="save_button">Save</string>
+    <string name="send_button">Send</string>
+    <string name="settings_button">Settings</string>
+    <string name="settings_title">Settings</string>
+    <style name="Theme.QDS_AI_Agent" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:colorForeground">@color/foreground</item>
+    </style>
+</resources>

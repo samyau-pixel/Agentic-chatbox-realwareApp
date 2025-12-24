@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.qds.aiagent.app-mergeDebugResources-32:/layout/activity_settings.xml",
+        "source": "com.qds.aiagent.app-main-35:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-mergeDebugResources-32:/layout/item_bot_message.xml",
+        "source": "com.qds.aiagent.app-main-35:/layout/item_bot_message.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-mergeDebugResources-32:/layout/item_user_message.xml",
+        "source": "com.qds.aiagent.app-main-35:/layout/item_user_message.xml"
+    },
+    {
+        "merged": "com.qds.aiagent.app-mergeDebugResources-32:/layout/activity_main.xml",
+        "source": "com.qds.aiagent.app-main-35:/layout/activity_main.xml"
+    }
+]
