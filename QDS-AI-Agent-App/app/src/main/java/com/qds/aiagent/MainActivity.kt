@@ -169,4 +169,12 @@ class MainActivity : AppCompatActivity() {
             voiceRecorder.release()
         }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        // Forward activity result to voice recorder for dictation handling
+        if (::voiceRecorder.isInitialized) {
+            voiceRecorder.handleDictationResult(requestCode, resultCode, data)
+        }
+    }
 }
