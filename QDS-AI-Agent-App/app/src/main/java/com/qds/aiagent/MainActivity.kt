@@ -21,10 +21,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var chatListView: ListView
     private lateinit var messageInput: EditText
     private lateinit var sendButton: Button
+    private lateinit var voiceButton: Button
     private lateinit var settingsButton: ImageButton
     private lateinit var adapter: ChatAdapter
     private val messages = mutableListOf<ChatMessage>()
     private lateinit var apiService: ApiService
+    private lateinit var voiceRecorder: VoiceRecorder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         chatListView = findViewById(R.id.chatListView)
         messageInput = findViewById(R.id.messageInput)
         sendButton = findViewById(R.id.sendButton)
+        voiceButton = findViewById(R.id.voiceButton)
         settingsButton = findViewById(R.id.settingsButton)
         findViewById<Button>(R.id.clearHistoryButton).setOnClickListener {
             messages.clear()
@@ -61,8 +64,24 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        voiceButton.setOnClickListener {
+            handleVoiceButtonClick()
+        }
+
         settingsButton.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
+        }
+    }
+
+    private fun handleVoiceButtonClick() {
+        if (voiceRecorder.isRecording()) {
+            voiceRecorder.stopListening()
+            voiceButton.text = "🎤"
+            Toast.makeText(this, "Voice recording stopped", Toast.LENGTH_SHORT).show()
+        } else {
+            voiceRecorder.startListening()
+            voiceButton.text = "🔴"
+            Toast.makeText(this, "Listening... Speak now", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -72,6 +91,15 @@ class MainActivity : AppCompatActivity() {
         Log.d("MainActivity", "Loaded IP:Port: $ipPort")
         Toast.makeText(this, "Server: $ipPort", Toast.LENGTH_SHORT).show()
         apiService = ApiService(ipPort)
+        
+        // Initialize VoiceRecorder with callback to populate input
+        voiceRecorder = VoiceRecorder(this) { voiceText ->
+            runOnUiThread {
+                messageInput.append(voiceText)
+                voiceButton.text = "🎤"
+                Log.d("MainActivity", "Voice text added to input: $voiceText")
+            }
+        }
     }
 
     private fun sendMessage(messageText: String) {
@@ -123,5 +151,22 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         // Reload settings in case they changed
         loadSettings()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        // Stop listening if recording when app is paused
+        if (::voiceRecorder.isInitialized && voiceRecorder.isRecording()) {
+            voiceRecorder.stopListening()
+            voiceButton.text = "🎤"
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        // Clean up voice recorder resources
+        if (::voiceRecorder.isInitialized) {
+            voiceRecorder.release()
+        }
     }
 }

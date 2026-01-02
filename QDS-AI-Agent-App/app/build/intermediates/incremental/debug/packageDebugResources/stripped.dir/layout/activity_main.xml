@@ -75,6 +75,16 @@
             android:textSize="14sp" />
 
         <Button
+            android:id="@+id/voiceButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:text="🎤"
+            android:textSize="20sp"
+            android:background="@color/primary"
+            android:textColor="@android:color/white" />
+
+        <Button
             android:id="@+id/sendButton"
             android:layout_width="48dp"
             android:layout_height="48dp"

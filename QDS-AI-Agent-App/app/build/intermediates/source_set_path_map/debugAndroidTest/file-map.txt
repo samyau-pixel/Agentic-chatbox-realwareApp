@@ -1,5 +1,5 @@
-com.qds.aiagent.test.app-core-1.5.0-0 C:\Users\Sam\.gradle\caches\transforms-3\5cb61a0a5be11e28a5ddfcdf3d89d5fb\transformed\core-1.5.0\res
-com.qds.aiagent.test.app-annotation-experimental-1.3.0-1 C:\Users\Sam\.gradle\caches\transforms-3\91114efd43b3626b68fc39325cabc613\transformed\annotation-experimental-1.3.0\res
+com.qds.aiagent.test.app-core-1.5.0-0 C:\Users\Sam\.gradle\caches\8.9\transforms\39468874954e8746ac613c5c537dc127\transformed\core-1.5.0\res
+com.qds.aiagent.test.app-annotation-experimental-1.3.0-1 C:\Users\Sam\.gradle\caches\8.9\transforms\fc9df309c691ad32c7d5a63fafefbd91\transformed\annotation-experimental-1.3.0\res
 com.qds.aiagent.test.app-androidTest-2 C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\build\generated\res\resValues\androidTest\debug
 com.qds.aiagent.test.app-mergeDebugAndroidTestResources-3 C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.qds.aiagent.test.app-mergeDebugAndroidTestResources-4 C:\Users\Sam\OneDrive\Desktop\Agentic-chat-realware\QDS-AI-Agent-App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir

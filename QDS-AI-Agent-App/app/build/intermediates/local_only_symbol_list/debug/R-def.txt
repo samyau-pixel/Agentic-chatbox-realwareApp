@@ -26,6 +26,7 @@ id messageTime
 id saveButton
 id sendButton
 id settingsButton
+id voiceButton
 layout activity_main
 layout activity_settings
 layout item_bot_message

@@ -37,15 +37,20 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final ImageButton settingsButton;
 
+  @NonNull
+  public final Button voiceButton;
+
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull ListView chatListView,
       @NonNull Button clearHistoryButton, @NonNull EditText messageInput,
-      @NonNull Button sendButton, @NonNull ImageButton settingsButton) {
+      @NonNull Button sendButton, @NonNull ImageButton settingsButton,
+      @NonNull Button voiceButton) {
     this.rootView = rootView;
     this.chatListView = chatListView;
     this.clearHistoryButton = clearHistoryButton;
     this.messageInput = messageInput;
     this.sendButton = sendButton;
     this.settingsButton = settingsButton;
+    this.voiceButton = voiceButton;
   }
 
   @Override
@@ -105,8 +110,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.voiceButton;
+      Button voiceButton = ViewBindings.findChildViewById(rootView, id);
+      if (voiceButton == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((LinearLayout) rootView, chatListView, clearHistoryButton,
-          messageInput, sendButton, settingsButton);
+          messageInput, sendButton, settingsButton, voiceButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
