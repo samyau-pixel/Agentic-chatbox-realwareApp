@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var settingsButton: ImageButton
     private lateinit var adapter: ChatAdapter
     private val messages = mutableListOf<ChatMessage>()
+    private val historyForLlm = mutableListOf<List<String>>()
     private lateinit var apiService: ApiService
     private lateinit var voiceRecorder: VoiceRecorder
 
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         settingsButton = findViewById(R.id.settingsButton)
         findViewById<Button>(R.id.clearHistoryButton).setOnClickListener {
             messages.clear()
+            historyForLlm.clear()
             adapter.notifyDataSetChanged()
         }
     }
@@ -128,11 +130,13 @@ class MainActivity : AppCompatActivity() {
             try {
                 Log.d("MainActivity", "Sending message: $messageText")
                 Log.d("MainActivity", "With ${history.size} history items")
-                val answer = apiService.sendMessage(messageText, history)
+                val answer = apiService.sendMessage(messageText, history, historyForLlm)
                 Log.d("MainActivity", "Received answer: $answer")
                 withContext(Dispatchers.Main) {
                     // Display bot response
                     messages.add(ChatMessage(answer, false, System.currentTimeMillis()))
+                    // Update historyForLlm with the new exchange
+                    historyForLlm.add(listOf(messageText, answer))
                     adapter.notifyDataSetChanged()
                     chatListView.setSelection(messages.size - 1)
                 }
