@@ -37,13 +37,21 @@ class ApiService(private val ipPort: String) {
             }
             jsonBody.put("history", historyArray)
             
-            // Add historyForLlm as separate array
+            // Add historyForLlm with proper role/content structure
             val historyForLlmArray = org.json.JSONArray()
             for (pair in historyForLlm) {
-                val pairArray = org.json.JSONArray()
-                pairArray.put(pair[0])
-                pairArray.put(pair[1])
-                historyForLlmArray.put(pairArray)
+                // Each pair is assumed to be [user_message, assistant_message]
+                // Create user message object
+                val userObj = JSONObject()
+                userObj.put("role", "user")
+                userObj.put("content", pair[0])
+                historyForLlmArray.put(userObj)
+                
+                // Create assistant message object
+                val assistantObj = JSONObject()
+                assistantObj.put("role", "assistant")
+                assistantObj.put("content", pair[1])
+                historyForLlmArray.put(assistantObj)
             }
             jsonBody.put("history_for_llm", historyForLlmArray)
             

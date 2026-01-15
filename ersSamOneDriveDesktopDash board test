@@ -1,0 +1,41 @@
+[33mcommit 64b37a31dd3baed87306a609c76978b593df5b62[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: samyau-pixel <sam.yau@quantum.com.hk>
+Date:   Tue Jan 6 16:46:23 2026 +0800
+
+    add history_for_llm
+
+[33mcommit 822c15a7176cb20297602cb4ffc9cd5cba0184fc[m
+Author: samyau-pixel <sam.yau@quantum.com.hk>
+Date:   Fri Jan 2 15:15:51 2026 +0800
+
+    add voice dictation
+
+[33mcommit dcb2401840988ceccc7d862630cc4e9599baeab8[m
+Author: samyau-pixel <sam.yau@quantum.com.hk>
+Date:   Fri Jan 2 14:41:32 2026 +0800
+
+    add voice button
+
+[33mcommit 9181e8cbd3186e4c4e1a458449266f9e06c15e8f[m
+Author: samyau-pixel <sam.yau@quantum.com.hk>
+Date:   Wed Dec 24 16:48:52 2025 +0800
+
+    add history, clear history button
+
+[33mcommit c8e5588fc4e87fc016f86e3fd89e39d1be0b1910[m
+Author: samyau-pixel <sam.yau@quantum.com.hk>
+Date:   Wed Dec 24 15:47:03 2025 +0800
+
+    now is avaliable to send question/query the model, can access api/chat
+
+[33mcommit 1ded3d782dacde25d007a9242ff68ab7a4d04163[m
+Author: samyau-pixel <sam.yau@quantum.com.hk>
+Date:   Wed Dec 24 11:37:05 2025 +0800
+
+    realware can send request to 192.168.1.65:8080/api/health, and gain response
+
+[33mcommit 413c790e8db7fb6bb8c496397115f953c4cf6938[m
+Author: samkunpeng <sam1304528579@gmail.com>
+Date:   Wed Dec 24 10:35:16 2025 +0800
+
+    first commit
